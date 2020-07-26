@@ -11,5 +11,7 @@ git clone https://github.com/nwdigitalradio/ambeserver-install.git
 
 cd ambeserver-install
 
+sudo chmod +x install.sh
+
 sudo ./install.sh
 

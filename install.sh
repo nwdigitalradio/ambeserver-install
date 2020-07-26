@@ -3,7 +3,7 @@ if [ "$(id -u)" != "0" ]; then
 	   echo "This script must be run as root" 1>&2
 	      exit 1
 fi
-ech "Installing latest build-essent tools"
+echo "Installing latest build-essent tools"
 apt install build-essential -y
 cp -r usr /
 INSTALLBASE=`pwd`
@@ -41,6 +41,8 @@ fi
 echo "Copying configuration, service, and support files"
 ls -R etc
 cp -r etc /
+systemctl restart udev
+ls -l /dev/ThumbDV
 echo "Endabling ThumbDV™ ..."
 systemctl start ambeserver@ThumbDV
 systemctl enable ambeserver@ThumbDV

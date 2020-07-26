@@ -53,6 +53,6 @@ A special device is created by udev for the ThumbDV™ by the file [99-thumbdv.r
 
 ## Support for the ThumbDV™
 
-For sales, returns, engineering, and hardware defects please use the [support form](https://nwdigitalradio.com/support/).
+For sales, returns, engineering, and hardware warranty please use the [support form](https://nwdigitalradio.com/support/).
 
 For support of AMBEserver, please post your questions on [NW Digital Radio's AMBE Support Forum](https://nw-digital-radio.groups.io/g/ambe) where you will also find test programs in it's associated file section.

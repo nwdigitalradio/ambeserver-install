@@ -3,7 +3,7 @@ Files, scripts and documentation for installing AMBEserver
 
 From the command line in a terminal:
 
-apt-get install git
+sudo apt-get install git
 
 cd
 

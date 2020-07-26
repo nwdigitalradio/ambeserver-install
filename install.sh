@@ -41,6 +41,7 @@ fi
 echo "Copying configuration, service, and support files"
 ls -R etc
 cp -r etc /
+systemctl daemon-reload
 systemctl restart udev
 ls -l /dev/ThumbDV
 echo "Endabling ThumbDV™ ..."

@@ -49,7 +49,7 @@ Using the included [service](etc/systemd/system/ambeserver@.service ) file, the
 sudo cp /etc/opendv/ambeserver-ttyUSB0.conf /etc/opendv/ambeserver-ttyUSB1.conf
 ```
 
-A special device is created by udev for the ThumbDV™ by the file [99-thumbdv.rules]( etc/udev/rules.d/99-thumbdv.rules ) as part of this install.  When a ThumbDV™ is plugged into a USB port, this rule causes udevd to detect it and create a link between /dev/ThumbDV and the enumerated USB port, e.g. /dev/ttyUSB0.  If the ThumbDV™ lands on a different USB port such as /dev/ttyUSB2, the link moves to that port.
+A special device is created by udev for the ThumbDV™ by the file [99-thumbdv.rules](etc/udev/rules.d/99-thumbdv.rules) as part of this install.  When a ThumbDV™ is plugged into a USB port, this rule causes udevd to detect it and create a link between /dev/ThumbDV and the enumerated USB port, e.g. /dev/ttyUSB0.  If the ThumbDV™ lands on a different USB port such as /dev/ttyUSB2, the link moves to that port.
 
 ## Support for the ThumbDV™
 

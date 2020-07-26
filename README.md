@@ -15,3 +15,5 @@ sudo chmod +x install.sh
 
 sudo ./install.sh
 
+# If your AMBEserver doesn't start, try removing and replacing the ThumbDV™, check for /dev/ThumbDV and then do a
+# sudo systemctl restart ambeserver@ThumbDV

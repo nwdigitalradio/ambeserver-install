@@ -51,8 +51,29 @@ sudo cp /etc/opendv/ambeserver-ttyUSB0.conf /etc/opendv/ambeserver-ttyUSB1.conf
 
 A special device is created by udev for the ThumbDV™ by the file [99-thumbdv.rules](etc/udev/rules.d/99-thumbdv.rules) as part of this install.  When a ThumbDV™ is plugged into a USB port, this rule causes udevd to detect it and create a link between /dev/ThumbDV and the enumerated USB port, e.g. /dev/ttyUSB0.  If the ThumbDV™ lands on a different USB port such as /dev/ttyUSB2, the link moves to that port.
 
-## Support for the ThumbDV™
+## Support for the ThumbDV™ and PiDV™
 
 For sales, returns, engineering, and hardware warranty please use the [support form](https://nwdigitalradio.com/support/).
 
 For support of AMBEserver, please post your questions on [NW Digital Radio's AMBE Support Forum](https://nw-digital-radio.groups.io/g/ambe) where you will also find test programs in it's associated file section.
+
+## Concerning the PiDV™
+
+The PiDV™ is no longer in production.  However, you can use this install to operate AMBEserver with the PiDV™.
+
+```
+sudo systemctl disable ambeserver@ThumbDV
+sudo systemctl stop ambeserver@ThumbDV
+sudo systemctl enable ambeserver@ttyAMA0
+sudo systemctl start ambeserver@ttyAMA0
+sudo systemctl status ambeserver@ttyAMA0
+```
+
+Further information on the [wiki](https://nw-digital-radio.groups.io/g/ambe/wiki/1418).
+
+## Test Scripts
+
+To test the ThumbDV™ or PiDV™ use the included Python script [AMBEtest3.py](AMBEtest3.py). You will need to install Python using apt-get first. Turn off ambeserver using **systemctl stop ambeserver@*device*** and then run the script.
+
+To test the AMBEserver, use the program [ambesocktest.py](ambesocktest.py). AMBEserver should be running for this test.  If your AMBEserver is not on port 2460 on localhost (127.0.0.1), you will need to edit the script.
+

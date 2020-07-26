@@ -7,7 +7,7 @@ apt-get install git
 
 cd
 
-git pull https://github.com/nwdigitalradio/ambeserver-install.git
+git clone https://github.com/nwdigitalradio/ambeserver-install.git
 
 cd ambeserver-install
 
